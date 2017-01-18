@@ -1,0 +1,38 @@
+<html>
+<head>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>      
+  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script type="text/javascript" src="../.tmpl/marked.js">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/darcula.min.css" >
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js">
+  </script>
+</head>
+<body>
+<div id="context">
+</div>
+<div id="markdown" style='display:none'>
+</div>
+
+<script type="text/javascript">
+marked.setOptions({
+  renderer: new marked.Renderer(),
+  gfm: true,
+  tables: true,
+  breaks: true,
+  pedantic: false,
+  smartLists: true,
+  smartypants: false,
+  sanitize: false,
+  highlight: function(code) {
+    return hljs.highlightAuto(code).value;
+  }
+});
+
+	document.getElementById("context").innerHTML = marked(
+			document.getElementById("markdown").innerHTML)
+</script>
+</body>
