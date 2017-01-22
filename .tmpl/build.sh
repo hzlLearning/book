@@ -14,9 +14,7 @@ function find_line() {
 
 MD_FILE=$1
 TMPL_FILE=$2
-
 TPL_LINE=`find_line $TMPL_FILE`
-
 cat $TMPL_FILE | head -n $((TPL_LINE-1))
 cat $MD_FILE
 cat $TMPL_FILE | tail -n +$((TPL_LINE+1))

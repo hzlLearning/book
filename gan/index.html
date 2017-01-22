@@ -12,11 +12,15 @@
   </script>
 </head>
 <body>
+
 <div id="context">
 </div>
+
+<!-- This block will be replaced by each markdown file content. Please do not change lines below.-->
 <div id="markdown" style='display:none'>
 TODO: Write about https://github.com/PaddlePaddle/Paddle/tree/develop/demo/gan
 </div>
+<!-- You can change the lines below now. -->
 
 <script type="text/javascript">
 marked.setOptions({
@@ -32,8 +36,7 @@ marked.setOptions({
     return hljs.highlightAuto(code).value;
   }
 });
-
-	document.getElementById("context").innerHTML = marked(
-			document.getElementById("markdown").innerHTML)
+document.getElementById("context").innerHTML = marked(
+		document.getElementById("markdown").innerHTML)
 </script>
 </body>
